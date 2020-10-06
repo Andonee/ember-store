@@ -1,10 +1,13 @@
-import EmberRouter from '@ember/routing/router';
-import config from 'store-frontend/config/environment';
+import EmberRouter from "@ember/routing/router";
+import config from "store-frontend/config/environment";
 
 export default class Router extends EmberRouter {
   location = config.locationType;
   rootURL = config.rootURL;
 }
 
-Router.map(function() {
+Router.map(function () {
+  this.route("sales");
+  this.route("top-products");
+  this.route("about-shop");
 });

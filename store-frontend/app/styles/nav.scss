@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background: var(--main-color);
+  box-shadow: 0px 3px 5px 0px rgba(158, 158, 158, 1);
+
+  &_logo {
+    font-size: 30px;
+    margin-left: 10px;
+    color: var(--main-text-color);
+  }
+
+  &_spaceholder {
+    flex-grow: 1;
+  }
+
+  &_links {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    font-size: 16px;
+
+    &_item {
+      text-decoration: none;
+      color: var(--main-text-color);
+    }
+  }
+}
