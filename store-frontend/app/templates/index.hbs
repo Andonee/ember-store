@@ -1,12 +1,29 @@
-<div class="main_header">
-  <div class="categories_container">
-    <Application::Categories as |category|>
-      {{category.link 'ELECTRONICS' 'electronics'}}
-      {{category.link 'COMPUTERS' 'computers'}}
-      {{category.link 'ARTS' 'arts'}}
-      {{category.link 'WOMEN\'s FASHION' 'women'}}
-      {{category.link 'MEN\'s FASHION' 'men'}}
-    </Application::Categories>
+<div class="index_container">
+
+
+  <div class="main_header">
+    <div class="categories_container">
+      <Application::Categories as |category|>
+        {{category.link 'ELECTRONICS' 'electronics'}}
+        {{category.link 'COMPUTERS' 'computers'}}
+        {{category.link 'ARTS' 'arts'}}
+        {{category.link 'WOMEN\'s FASHION' 'women'}}
+        {{category.link 'MEN\'s FASHION' 'men'}}
+      </Application::Categories>
+    </div>
+    <Header />
   </div>
-  <Header />
+
+  <h3 class="special_offer">Special Offer</h3>
+
+  <div class="products">
+    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
+    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
+    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
+    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
+    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
+    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
+    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
+  </div>
+
 </div>
