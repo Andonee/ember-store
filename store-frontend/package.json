@@ -59,6 +59,9 @@
     "edition": "octane"
   },
   "dependencies": {
-    "ember-cli-sass": "^10.0.1"
+    "ember-cli-sass": "^10.0.1",
+    "ember-modal-dialog": "^3.0.1",
+    "ember-responsive": "^4.0.1",
+    "ember-tether": "^2.0.0"
   }
 }

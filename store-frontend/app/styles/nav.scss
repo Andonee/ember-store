@@ -21,9 +21,61 @@
     width: 300px;
     font-size: 16px;
 
+    &_mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
     &_item {
       text-decoration: none;
       color: var(--main-text-color);
+
+      &_mobile {
+        text-decoration: none;
+        color: #fff;
+        font-size: 28px;
+        margin: 10px 0;
+      }
     }
+  }
+
+  &_hamburger {
+    margin-left: auto;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+}
+
+.ember-modal-dialog {
+  background: #7d7d7d;
+  width: 80%;
+  height: 100vh;
+  right: 0px;
+  animation: slideIn 0.3s;
+  box-shadow: -2px 0px 2px 0px #5d5d5d;
+}
+
+.ember-modal-overlay {
+  background: #56565696;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes slideIn {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

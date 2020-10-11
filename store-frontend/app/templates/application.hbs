@@ -1,13 +1,9 @@
-<header>
-  <nav class="nav">
-    <div class="nav_logo">LOGO</div>
-    <div class="nav_spaceholder" />
-    <div class="nav_links">
-      <LinkTo class="nav_links_item" @route='index'>MAIN</LinkTo>
-      <LinkTo class="nav_links_item" @route='sales'>SALES</LinkTo>
-      <LinkTo class="nav_links_item" @route='top-products'>TOP</LinkTo>
-      <LinkTo class="nav_links_item" @route='about-shop'>ABOUT</LinkTo>
-    </div>
-  </nav>
-</header>
+<Application::AppHeader as |header|>
+  {{header.template 'MAIN' 'index'}}
+  {{header.template 'SALES' 'sales'}}
+  {{header.template 'TOP' 'top-products'}}
+  {{header.template 'ABOUT' 'about-shop'}}
+</Application::AppHeader>
+
+
 {{outlet}}

@@ -1,0 +1,32 @@
+<header>
+  <nav class="nav">
+    <div class="nav_logo">LOGO</div>
+    {{#if (media 'isMobile')}}
+    <button class="nav_hamburger" {{on "click" this.toggleNav}}>
+      &#9776;
+    </button>
+    {{#if this.isShowingNav}}
+    {{#modal-dialog targetAttachment='left' onClose=(action toggleNav)}}
+    <div class="nav_links_mobile" {{action this.toggleNav}}>
+      {{!-- <LinkTo class="nav_links_item_mobile" @route='index'>MAIN</LinkTo>
+      <LinkTo class="nav_links_item_mobile" @route='sales'>SALES</LinkTo>
+      <LinkTo class="nav_links_item_mobile" @route='top-products'>TOP</LinkTo>
+      <LinkTo class="nav_links_item_mobile" @route='about-shop'>ABOUT</LinkTo> --}}
+      {{yield (hash template=(component "link-to" class="nav_links_item_mobile"))}}
+
+    </div>
+    {{/modal-dialog}}
+    {{/if}}
+    {{else}}
+    <div class="nav_spaceholder" />
+    <div class="nav_links">
+
+      {{yield (hash template=(component "link-to" class="nav_links_item"))}}
+      {{!-- <LinkTo class="nav_links_item" @route='index'>MAIN</LinkTo>
+      <LinkTo class="nav_links_item" @route='sales'>SALES</LinkTo>
+      <LinkTo class="nav_links_item" @route='top-products'>TOP</LinkTo>
+      <LinkTo class="nav_links_item" @route='about-shop'>ABOUT</LinkTo> --}}
+    </div>
+    {{/if}}
+  </nav>
+</header>

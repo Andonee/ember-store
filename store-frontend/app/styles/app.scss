@@ -1,6 +1,8 @@
 @import "./nav.scss";
 @import "./colors.scss";
 
+@import "ember-modal-dialog/ember-modal-structure";
+
 body {
   margin: 0;
   font-size: 62.5%;
