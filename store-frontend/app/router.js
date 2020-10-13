@@ -15,4 +15,5 @@ Router.map(function () {
   this.route('arts');
   this.route('women');
   this.route('men');
+  this.route('add-product');
 });
