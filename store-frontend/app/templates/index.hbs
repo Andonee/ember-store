@@ -17,13 +17,9 @@
   <h3 class="special_offer">Special Offer</h3>
 
   <div class="products">
-    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
-    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
-    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
-    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
-    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
-    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
-    <Products::ProductItem @img="/assets/images/shoes.jpg" @title="Awesome shoes" @price="39.99" />
+    {{#each this.model as |model|}}
+    <Products::ProductItem @img={{model.image}} @title={{model.title}} @price={{model.price}} />
+    {{/each}}
   </div>
 
 </div>
