@@ -1,12 +1,14 @@
 {
   "products": [
     {
+      "id": 1,
       "title": "Shoes",
       "category": "men's fashion",
       "price": 39.99,
       "image": "https://images-na.ssl-images-amazon.com/images/I/41Leu3gBUFL.jpg"
     },
     {
+      "id": 2,
       "title": "Televisor",
       "category": "electronics",
       "price": 238.00,

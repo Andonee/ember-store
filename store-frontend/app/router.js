@@ -10,10 +10,11 @@ Router.map(function () {
   this.route("sales");
   this.route("top-products");
   this.route("about-shop");
-  this.route('electronics');
-  this.route('computers');
-  this.route('arts');
-  this.route('women');
-  this.route('men');
-  this.route('add-product');
+  this.route("electronics");
+  this.route("computers");
+  this.route("arts");
+  this.route("women");
+  this.route("men");
+  this.route("add-product");
+  this.route("item", { path: "/item/:item_id" });
 });
