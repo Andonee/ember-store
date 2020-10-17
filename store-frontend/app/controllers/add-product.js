@@ -34,4 +34,18 @@ export default class AddProductController extends Controller {
   onCategorySelect(category) {
     this.category = category;
   }
+  @action
+  createProduct() {
+    this.store
+      .createRecord("product", {
+        id: Math.floor(Math.random() * 1000),
+        title: this.name,
+        category: this.category,
+        price: this.price,
+        image: this.image,
+      })
+      .save();
+
+    this.transitionToRoute("index");
+  }
 }

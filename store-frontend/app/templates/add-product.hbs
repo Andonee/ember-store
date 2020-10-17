@@ -7,7 +7,7 @@
     </PowerSelect>
     <Input placeholder="price" class="add_product_input" @value={{this.price}} />
     <Input placeholder="product photo" class="add_product_input" @value={{this.image}} />
-    <button class="add_product_btn" type="button" {{on "click" this.Products}}>ADD PRODUCT</button>
+    <button class="add_product_btn" type="button" {{on "click" this.createProduct}}>ADD PRODUCT</button>
   </div>
   {{#if this.image}}
   <div class="add_product_image_container">
