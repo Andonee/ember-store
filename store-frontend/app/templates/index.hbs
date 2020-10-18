@@ -17,9 +17,16 @@
   <h3 class="special_offer">Special Offer</h3>
 
   <div class="products">
-    {{#each this.model as |model|}}
+    {{#each model as |model|}}
     <Products::ProductItem @model={{model}} @img={{model.image}} @title={{model.title}} @price={{model.price}} />
     {{/each}}
   </div>
+  {{!-- 
+  {{#each product as |product|}}
+  <h1>{{product.title}}</h1>
+  {{/each}} --}}
+  {{#each model as |product|}}
+  <h1>{{product.title}}</h1>
+  {{/each}}
 
 </div>

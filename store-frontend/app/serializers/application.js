@@ -1,3 +1,5 @@
-import RESTSerializer from "@ember-data/serializer/rest";
+import JSONSerializer from "@ember-data/serializer/json";
 
-export default class ApplicationSerializer extends RESTSerializer {}
+export default class ApplicationSerializer extends JSONSerializer {
+  primaryKey = "_id";
+}
