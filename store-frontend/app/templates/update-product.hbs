@@ -1,0 +1,18 @@
+<div class="add_product_container">
+  <div class="add_product">
+    <Input placeholder="Product name" @value={{this.model.title}} class="add_product_input" />
+    <PowerSelect @options={{this.categories}} @selected={{this.model.category}} @onChange={{this.onCategorySelect}} as
+      |category|>
+      {{this.model.category}}
+    </PowerSelect>
+    <Input placeholder="price" class="add_product_input" @value={{this.model.price}} />
+    <Input placeholder="product photo" class="add_product_input" @value={{this.model.image}} />
+    <button class="add_product_btn" type="button" {{on "click" (fn this.updateProduct this.model.id)}}>ADD
+      PRODUCT</button>
+  </div>
+  {{#if this.image}}
+  <div class="add_product_image_container">
+    <img class="add_product_image" src={{this.image}} alt='procuct' />
+  </div>
+  {{/if}}
+</div>

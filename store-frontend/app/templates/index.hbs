@@ -18,7 +18,8 @@
 
   <div class="products">
     {{#each model as |model|}}
-    <Products::ProductItem @model={{model}} @img={{model.image}} @title={{model.title}} @price={{model.price}} />
+    <Products::ProductItem @deleteProduct={{this.deleteProduct}} @updateProduct={{this.updateProduct}} @model={{model}}
+      @img={{model.image}} @title={{model.title}} @price={{model.price}} />
     {{/each}}
   </div>
   {{!-- 

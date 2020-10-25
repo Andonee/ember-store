@@ -5,3 +5,5 @@
     <div class="product_price">{{this.args.price}}</div>
   </div>
 </LinkTo>
+<button type="button" {{on "click" (fn this.args.deleteProduct @this.model.id)}}>Remove</button>
+<button type="button" {{on "click" (fn this.args.updateProduct @this.model.id)}}>Update</button>
