@@ -46,6 +46,11 @@ export default class AddProductController extends Controller {
       })
       .save();
 
+    (this.name = ""),
+      (this.category = ""),
+      (this.price = ""),
+      (this.image = "");
+
     this.transitionToRoute("index");
   }
 }
