@@ -18,4 +18,5 @@ Router.map(function () {
   this.route("add-product");
   this.route("item", { path: "/item/:item_id" });
   this.route("update-product", { path: "/product/:item_id" });
+  this.route("not-found", { path: "/*path" });
 });
