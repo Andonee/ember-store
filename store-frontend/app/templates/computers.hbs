@@ -1,1 +1,9 @@
-{{outlet}}
+<div class="products">
+  {{#each model as |product|}}
+  <Products::ProductItem @deleteProduct={{this.deleteProduct}} @updateProduct={{this.updateProduct}} @model={{product}}
+    @img={{product.image}} @title={{product.title}} @price={{currency product.price sign='$'}} />
+  {{/each}} </div>
+
+{{#each model as |product|}}
+<h2>{{product.title}}</h2>
+{{/each}}

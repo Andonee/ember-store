@@ -9,13 +9,15 @@ export default class ApplicationAdapter extends RESTAdapter {
   // }
 
   buildURL(modelName, id, snapshot, requestType, query) {
+    // debugger;
     switch (requestType) {
       case "findRecord":
         return this.urlForFindRecord(id, modelName, snapshot);
       case "findAll":
         return this.urlForFindAll(modelName);
       case "query":
-        return this.urlForQuery(query, modelName);
+        console.log(this.host + "/" + modelName + "s" + query);
+        return this.host + "/" + modelName + "s" + query;
       case "queryRecord":
         return this.urlForQueryRecord(query, modelName);
       case "findMany":

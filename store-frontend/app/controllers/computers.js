@@ -1,7 +1,7 @@
 import Controller from "@ember/controller";
 import { action } from "@ember/object";
 
-export default class ElectronicsController extends Controller {
+export default class ComputersController extends Controller {
   @action
   async deleteProduct(product_id) {
     const product = this.store.peekRecord("product", product_id);
