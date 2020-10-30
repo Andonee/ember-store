@@ -2,8 +2,8 @@
   <LinkTo class="item_link" @route="item" @model={{this.args.model}}>
     <div class="product">
       <img src={{this.args.img}} alt="shoes" class="product_img" />
-      <div class="product_title">{{this.args.title}}</div>
-      <div class="product_price">{{this.args.price}}</div>
+      <div class="product_title">{{@title}}</div>
+      <div class="product_price">{{@price}}</div>
     </div>
   </LinkTo>
   <div class="item-btns">

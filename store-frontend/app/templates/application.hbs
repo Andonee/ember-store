@@ -4,6 +4,12 @@
   {{header.template 'TOP' 'top-products'}}
   {{header.template 'ABOUT' 'about-shop'}}
   {{header.template 'ADD PRODUCT' 'add-product'}}
+  <div>
+    {{header.template 'SHOPPING CART' 'cart'}}
+    {{#if this.cart.itemList.length}}
+    <span class="cart_products">{{this.itemCount}}</span>
+    {{/if}}
+  </div>
 </Application::AppHeader>
 
 

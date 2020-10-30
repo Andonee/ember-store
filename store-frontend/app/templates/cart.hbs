@@ -1,0 +1,33 @@
+<h1>Shopping cart</h1>
+
+<div class="shopping-cart">
+
+  <div class="cart_items">
+    {{#each this.cart.itemList as |item|}}
+    <div class="cart_item">
+      <div class="cart_info">
+        <h4 class="cart_title">{{item.title}}</h4>
+        <div class="cart_price">{{currency item.price sign='$'}}</div>
+        <input class="cart_number" type="number" value={{item.count}} {{on "input" (fn this.updateItemCount item)}} />
+      </div>
+      <img class="cart_image" src={{item.image}} alt={{image.title}} />
+    </div>
+    {{/each}}
+  </div>
+
+  <div class="cart">
+    <div class="cart_amount">
+      <span>Subtotal:</span>
+      <span>{{currency this.subtotal sign="$"}}</span>
+    </div>
+    <div class="cart_amount">
+      <span>Tax:</span>
+      <span>{{currency this.tax sign='$'}}</span>
+    </div>
+    <div class="cart_amount">
+      <span>Total:</span>
+      <span>{{currency this.total sign='$'}}</span>
+    </div>
+  </div>
+
+</div>
